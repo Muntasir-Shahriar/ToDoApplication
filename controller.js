@@ -79,6 +79,11 @@ function deleteRow(obj) {
     var index = obj.parentNode.parentNode.rowIndex;
     var table = document.getElementById("myTable");
     table.deleteRow(index);
+    
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('roll').value = '';
+    document.getElementById('bgroup').value = '';
 }
 var rIndex;
 function editRow(object) {
