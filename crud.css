@@ -1,27 +1,38 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/apple.jpg");
-	height: 100vh;
-	background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5),rgba(0,0,0,0.5), rgba(0,0,0,0.5),rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/apple.jpg");
+    height: 85vh;
+    width: 94%;
+    background-size: cover;
+    background-repeat: repeat;
 	background-position: center;
 }
 
 .container{
-    margin: 50px 100px;
+    width: 100%;
+    margin: 100px 100px;
+}
+#left-content{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    float: left;    
+}
+#right-content{
+    width: 50%;
+    float: left;
 }
 #input-field{
-    padding: 10px 50px 30px 50px;
+    padding: 10px 60px 40px 50px;
     background: #CCE8FF;
-    float: left;
-    margin: 0px 80px 0px 80px;
+    margin: 0px 50px 0px 50px;
     line-height: .2;
 }
 #table{
-    float: left;
+    width: 50%;
     background: #CCE8FF;
-    margin: 0px 70px 0px 10px;
-    padding: 20px 50px 20px 50px;
+    padding: 20px;
 }
 
 #input-field p{
@@ -41,14 +52,13 @@ body{
 #btn1{
     background: #F6A974;
     padding: 5px 12px;
-    margin-left: 20px;
     border: 2px solid #007ACC;
 }
 #btn2{
     background: #F6A974;
     padding: 5px 12px;
-    margin-left: 14px;
     border: 2px solid #007ACC;
+    display: none;
 }
 
 #btn1:hover{

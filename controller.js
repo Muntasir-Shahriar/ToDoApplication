@@ -1,4 +1,3 @@
-
 var rIndex,
 table = document.getElementById('myTable');
 var userfName = document.getElementById('fname');
@@ -19,7 +18,7 @@ var userbGroup = document.getElementById('bgroup');
 
 //return isEmpty;
 //}
-
+/*
 function checkEmptyInput() {
     var isEmpty = false;
     userfName = document.getElementById('fname').value;
@@ -42,6 +41,35 @@ function checkEmptyInput() {
 
     return isEmpty;
 }
+*/
+function checkEmptyInput() {
+    var isEmpty = false;
+    userfName = document.getElementById('fname').value;
+    userlName = document.getElementById('lname').value;
+    userId = document.getElementById('roll').value;
+    userbGroup = document.getElementById('bgroup').value;
+
+    if (isNaN(userfName)){
+        text = "Input not valid";
+        document.getElementById("demo1").innerHTML = text;
+    }
+
+    else if (isNaN (userlName)) {
+        text = "Input not valid";
+        document.getElementById("demo2").innerHTML = text;
+    }
+    
+    else if (isNaN(userId)){
+        text = "Input not valid";
+        document.getElementById("demo3").innerHTML = text;
+    }
+    
+    else if (isNaN(userbGroup)){
+        text = "Input not valid";
+        document.getElementById("demo4").innerHTML = text;
+    }
+    
+}
 
 function addRow() {
     if (!checkEmptyInput()) {
@@ -58,16 +86,16 @@ function addRow() {
         userlName = document.getElementById('lname').value;
         userId = document.getElementById('roll').value;
         userbGroup = document.getElementById('bgroup').value;
-        document.getElementById("btn2").disabled = true;
-
+        
         cell1.innerHTML = userfName;
         cell2.innerHTML = userlName;
         cell3.innerHTML = userId;
         cell4.innerHTML = userbGroup;
-        cell5.innerHTML = '<input type="button" value = "Edit" onClick="Javacsript:editRow(this)">';
-        cell6.innerHTML = '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+        cell5.innerHTML = '<input type="button" id = "btn" value = "Edit" onClick="Javacsript:editRow(this)">';
+        cell6.innerHTML = '<input type="button" id = "btn" value = "Delete" onClick="Javacsript:deleteRow(this)">';
         //selectedRowToInput();
-
+        
+        //document.getElementById("btn").style.background = "blue";
         document.getElementById('fname').value = '';
         document.getElementById('lname').value = '';
         document.getElementById('roll').value = '';
@@ -84,10 +112,13 @@ function deleteRow(obj) {
     document.getElementById('lname').value = '';
     document.getElementById('roll').value = '';
     document.getElementById('bgroup').value = '';
+    document.getElementById("btn1").style.display="inline";
+    document.getElementById("btn2").style.display="none";
 }
 var rIndex;
 function editRow(object) {
-    document.getElementById("btn2").disabled = true;
+    document.getElementById("btn1").style.display="none";
+    document.getElementById("btn2").style.display="inline";
     debugger;
     var index1 = object.parentNode.parentNode.cells;
     rIndex = object.parentNode.parentNode.rowIndex;
@@ -116,6 +147,8 @@ function updateRow() {
         document.getElementById('lname').value = '';
         document.getElementById('roll').value = '';
         document.getElementById('bgroup').value = '';
+        document.getElementById("btn1").style.display="inline";
+        document.getElementById("btn2").style.display="none";
     }
 }
 

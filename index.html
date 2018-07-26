@@ -8,33 +8,41 @@
 
 <body>
     <div class="container">
-        <div id="input-field">
-            <form >
-                <p>First Name:</p>
-                <input type="text" id="fname" class="input-element" placeholder="Enter First name.." required>
-                <p>Last Name:</p>
-                <input  type="text" id="lname" class="input-element" placeholder="Enter Last name.." required>
-                <p>Id:</p>
-                <input  type="Number" id="roll" class="input-element" placeholder="Enter  id.." required>
-                <p>Blode Group:</p>
-                <input  type="text" id="bgroup" class="input-element" placeholder="Enter Blode Group .." required>
-                <br>
-                <botton type="botton" id="btn1" class="input-element" onclick="addRow()">Save</botton>
-                <botton type="botton" id="btn2" class="input-element" onclick="updateRow()" disabled>Update</botton>
-            </form>
-
+        <div id="left-content">
+            <div id="input-field">
+                <form>
+                    <p>First Name:</p>
+                    <input type="text" id="fname" class="input-element" placeholder="Enter First name.." name="name" required>
+                    <p id="demo1"></p>
+                    <p>Last Name:</p>
+                    <input  type="text" id="lname" class="input-element" placeholder="Enter Last name.." name="lname" required>
+                    <p id="demo2"></p>
+                    <p>Id:</p>
+                    <input  type="Number" id="roll" class="input-element" placeholder="Enter id.." name="id" required>
+                    <p id="demo3"></p>
+                    <p>Blood Group:</p>
+                    <input  type="text" id="bgroup" class="input-element" placeholder="Enter Blood Group .." name="bgroup" required>
+                    <p id="demo4"></p>
+                    <br>
+                    <botton type="botton" id="btn1" class="input-element" onclick="addRow()">Save</botton>
+                    <botton type="botton" id="btn2" class="input-element" onclick="updateRow()" disabled>Update</botton>
+                </form>
+            </div>
         </div>
-        <div id="table">
-            <table id="myTable">
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Id</th>
-                    <th>Blode Group</th>
-                    <th>&nbsp;</th>
-                    <th>&nbsp;</th>
-                </tr>
-            </table>
+
+        <div id="right-content">
+            <div id="table">
+                <table id="myTable">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Id</th>
+                        <th>Blood Group</th>
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
