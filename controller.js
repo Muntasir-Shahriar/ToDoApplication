@@ -18,7 +18,7 @@ var userbGroup = document.getElementById('bgroup');
 
 //return isEmpty;
 //}
-/*
+
 function checkEmptyInput() {
     var isEmpty = false;
     userfName = document.getElementById('fname').value;
@@ -41,7 +41,7 @@ function checkEmptyInput() {
 
     return isEmpty;
 }
-*/
+/*
 function checkEmptyInput() {
     var isEmpty = false;
     userfName = document.getElementById('fname').value;
@@ -68,8 +68,7 @@ function checkEmptyInput() {
         text = "Input not valid";
         document.getElementById("demo4").innerHTML = text;
     }
-    
-}
+    */
 
 function addRow() {
     if (!checkEmptyInput()) {
@@ -91,8 +90,8 @@ function addRow() {
         cell2.innerHTML = userlName;
         cell3.innerHTML = userId;
         cell4.innerHTML = userbGroup;
-        cell5.innerHTML = '<input type="button" id = "btn" value = "Edit" onClick="Javacsript:editRow(this)">';
-        cell6.innerHTML = '<input type="button" id = "btn" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+        cell5.innerHTML = '<input type="submit" id = "btn" value = "Edit" onClick="Javacsript:editRow(this)">';
+        cell6.innerHTML = '<input type="submit" id = "btn" value = "Delete" onClick="Javacsript:deleteRow(this)">';
         //selectedRowToInput();
         
         //document.getElementById("btn").style.background = "blue";

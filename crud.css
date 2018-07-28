@@ -34,6 +34,34 @@ body{
     background: #CCE8FF;
     padding: 20px;
 }
+@media only screen and (min-width: 1200px) {
+    #table{
+        width: 60%;
+        background: #CCE8FF;
+        padding: 20px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #table{
+        width: 72%;
+        background: #CCE8FF;
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #table{
+        width: 100%;
+        background: #CCE8FF;
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #table{
+        width: 100%;
+        background: #CCE8FF;
+        padding: 20px;
+    }
+}
 
 #input-field p{
     margin-bottom: 0px;
